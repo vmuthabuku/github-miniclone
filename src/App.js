@@ -9,7 +9,7 @@ import { ApolloProvider } from 'react-apollo'
 import {HttpLink} from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import SideBar from './components/sidebar'
-
+import Column from './components/column'
 const accessToken = localStorage.getItem('token');
 
 const httpLink = new HttpLink({
@@ -48,7 +48,20 @@ class App extends Component{
       {
         accessToken ? (
           <ApolloProvider client={client}>
+          <div
+          css={{
+              display: 'grid',
+              gridTemplateColumns: '0.5fr 5fr 1fr',
+              gridRowGap:'1ch',
+              height: '100vh',
+              overflow: 'hidden'
+							}}
+          >
             <SideBar/>
+            <Column user="vmuthabuku"/>
+            <p></p>          
+          </div>
+            
           </ApolloProvider>
          )      
         : ( <Login /> )

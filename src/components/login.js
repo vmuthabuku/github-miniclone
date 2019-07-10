@@ -34,6 +34,7 @@ const Login = () => {
 						textAlign: 'center',
 						fontSize: 48,
 						marginTop: 12,
+						backgroundColor: '#fafafa'
 					}}
 				>
 					git-me-up
