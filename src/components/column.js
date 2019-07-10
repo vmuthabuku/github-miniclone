@@ -12,7 +12,7 @@ query($user:String!) {
     user(login:$user){
       id
       avatarUrl
-      starredRepositories(last:4){
+      starredRepositories(last:6){
         edges{
           node{
             id
@@ -46,11 +46,11 @@ query($user:String!) {
 const ColumnWrapper = styled('section')({
   width: '100%',
 	maxWidth: '100%',
-	//backgroundColor: '#fafafa',
+	backgroundColor: '#fafafa',
 	borderRight: '2px solid #eee',
 	padding: 15,
 	height: '100vh',
-	//overflowY: 'scroll'
+	//overflowY: 'auto'
 })
 
 const Column = ({user}) =>{

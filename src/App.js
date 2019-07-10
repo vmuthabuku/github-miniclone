@@ -54,7 +54,7 @@ class App extends Component{
               gridTemplateColumns: '0.5fr 5fr 1fr',
               gridRowGap:'1ch',
               height: '100vh',
-              overflow: 'hidden'
+              overflowY: 'hidden'
 							}}
           >
             <SideBar/>
